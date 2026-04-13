@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Point – Cestovná agentúra</title>
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.cdnfonts.com/css/dot-matrix" rel="stylesheet">
+
+    <!-- Lottie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- TRANSITION OVERLAY -->
+    <div id="transition-overlay"></div>
+
+    <!-- LOADER -->
+    <div id="page-loader">
+        <div id="globe-animation"></div>
+        <div id="loader-bottom-area">
+            <div id="loader-bar-track">
+                <div id="loader-bar-fill"></div>
+            </div>
+            <div id="loader-counter">0%</div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+
+                <!-- LOGO -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="travelpoint-logo.svg" alt="Travel Point logo">
+                </a>
+
+                <!-- TOGGLE BUTTON -->
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <div class="burger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+
+                <!-- MENU -->
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="stub.html" data-i18n="nav.about">O nás</a></li>
+                        <li class="nav-item"><a class="nav-link" href="stub.html" data-i18n="nav.tours">Zájazdy</a></li>
+                        <li class="nav-item"><a class="nav-link" href="stub.html" data-i18n="nav.contacts">Kontakty</a></li>
+                    </ul>
+
+                    <!-- LANGUAGE SWITCHER -->
+                    <div class="lang-switcher">
+                        <button class="lang-btn" data-lang="sk" aria-label="Slovenčina">SK</button>
+                        <span class="lang-divider">|</span>
+                        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+                    </div>
+
+                    <!-- CTA BUTTON -->
+                    <a href="anketa.html" class="btn" data-i18n="nav.cta">Zapísať sa na konzultáciu</a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container text-center hero-inner">
+
+                <h1 data-i18n="hero.title">Vaša cesta za slnkom začína tu</h1>
+
+                <p class="hero-desc" data-i18n="hero.desc">
+                    Pomáhame vám rýchlo a jednoducho vybrať dovolenku do najobľúbenejších destinácií, kde na vás čakajú overené hotely a zážitky, ktoré si budete pamätať
+                </p>
+
+                <div class="hero-location d-flex justify-content-center align-items-center">
+                    <img src="location.svg" alt="location icon" class="hero-location-icon">
+                    <span data-i18n="hero.location">Košice, Slovensko</span>
+                </div>
+
+                <div class="board-frame">
+                    <div class="board">
+                        <div class="board-head">
+                            <div class="head-col">
+                                <span class="head-icon">
+                                    <img src="plane.svg" alt="" aria-hidden="true">
+                                </span>
+                                <span class="head-label" data-i18n="board.destination">Kam</span>
+                            </div>
+                            <div class="head-col head-col-right">
+                                <span class="head-icon1">
+                                    <img src="calendar.svg" alt="" aria-hidden="true">
+                                </span>
+                                <span class="head-label" data-i18n="board.dates">Termíny</span>
+                            </div>
+                        </div>
+
+                        <div class="row-board">
+                            <div class="row-content">
+                                <span class="from-to"><span class="flag-emoji">🇮🇹</span> Taliansko</span>
+                                <span class="time">12.07.2025</span>
+                            </div>
+                            <div class="divider"></div>
+                        </div>
+
+                        <div class="row-board">
+                            <div class="row-content">
+                                <span class="from-to"><span class="flag-emoji">🇪🇬</span> Egypt</span>
+                                <span class="time">05.08.2025</span>
+                            </div>
+                            <div class="divider"></div>
+                        </div>
+
+                        <div class="row-board">
+                            <div class="row-content">
+                                <span class="from-to"><span class="flag-emoji">🇬🇷</span> Grécko</span>
+                                <span class="time">20.07.2025</span>
+                            </div>
+                            <div class="divider"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <a href="stub.html" class="btn hero-btn mt-3" data-i18n="hero.btnOffer">Zobraziť ponuku</a>
+
+                <!-- STATISTICS -->
+                <div class="hero-stats row justify-content-center">
+                    <div class="col-4 col-md-3 text-center">
+                        <h3>1200+</h3>
+                        <p data-i18n="stats.clients">spokojných klientov</p>
+                    </div>
+                    <div class="col-4 col-md-3 text-center">
+                        <h3>300+</h3>
+                        <p data-i18n="stats.families">rodinných dovoleniek</p>
+                    </div>
+                    <div class="col-4 col-md-3 text-center">
+                        <h3>50+</h3>
+                        <p data-i18n="stats.routes">trás a destinácií</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section class="features">
+            <div class="container">
+                <h2 class="text-center mb-5" data-i18n="features.title">Čo pre vás máme</h2>
+
+                <div class="row g-5">
+
+                    <!-- Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 feature-card">
+                            <img src="about.svg" class="card-img-top" alt="Ikona – O nás, naša história a tím">
+                            <div class="card-body">
+                                <h5 class="card-title" data-i18n="features.card1.title">O nás</h5>
+                                <p class="card-text" data-i18n="features.card1.text">Pomáhame vám vybrať tú správnu dovolenku rýchlo a spoľahlivo</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 feature-card">
+                            <img src="destination.svg" class="card-img-top" alt="Ikona – Prehľad destinácií a zájazdov">
+                            <div class="card-body">
+                                <h5 class="card-title" data-i18n="features.card2.title">Zájazdy</h5>
+                                <p class="card-text" data-i18n="features.card2.text">Ponúkame top destinácie s overenými hotelmi a komplexným servisom</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card h-100 feature-card">
+                            <img src="contact.svg" class="card-img-top" alt="Ikona – Kontaktné údaje a mapa">
+                            <div class="card-body">
+                                <h5 class="card-title" data-i18n="features.card3.title">Kontakty</h5>
+                                <p class="card-text" data-i18n="features.card3.text">Jednoducho nás môžete kontaktovať telefonicky alebo online</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER (injected by footer.js) -->
+    <div id="site-footer"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="loader.js"></script>
+    <script src="footer.js"></script>
+
+    <script>
+      // LED board animation
+      document.addEventListener('DOMContentLoaded', function () {
+        var rows = document.querySelectorAll('.row-content');
+        rows.forEach(function (r) { r.classList.add('led-on'); });
+        setInterval(function () {
+          rows.forEach(function (row, index) {
+            setTimeout(function () {
+              row.classList.remove('led-on');
+              row.classList.add('led-off');
+              setTimeout(function () {
+                row.classList.remove('led-off');
+                row.classList.add('led-on');
+              }, 600);
+            }, index * 200);
+          });
+        }, 12000);
+
+        // Page transition overlay
+        var overlay = document.getElementById('transition-overlay');
+        document.querySelectorAll('a[href="stub.html"]').forEach(function (link) {
+          link.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (overlay) {
+              overlay.classList.add('active');
+              setTimeout(function () { window.location.href = 'stub.html'; }, 400);
+            } else {
+              window.location.href = 'stub.html';
+            }
+          });
+        });
+      });
+
+      // Page loader (waits for both: timer done AND page loaded)
+      var _pageLoaded = false, _loaderDone = false;
+      window.addEventListener('load', function () {
+        _pageLoaded = true;
+        if (_loaderDone) TpLoader.hide();
+      });
+      TpLoader.run(null, function () {
+        _loaderDone = true;
+        if (_pageLoaded) TpLoader.hide();
+      });
+    </script>
+
+    <script src="i18n.js"></script>
+    <script src="cursor.js"></script>
+</body>
+</html>

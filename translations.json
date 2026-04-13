@@ -1,0 +1,166 @@
+{
+  "sk": {
+    "nav": {
+      "about": "O nás",
+      "tours": "Zájazdy",
+      "contacts": "Kontakty",
+      "cta": "Zapísať sa na konzultáciu"
+    },
+    "hero": {
+      "title": "Vaša cesta za slnkom začína tu",
+      "desc": "Pomáhame vám rýchlo a jednoducho vybrať dovolenku do najobľúbenejších destinácií, kde na vás čakajú overené hotely a zážitky, ktoré si budete pamätať",
+      "location": "Košice, Slovensko",
+      "btnOffer": "Zobraziť ponuku"
+    },
+    "board": {
+      "destination": "Kam",
+      "dates": "Termíny"
+    },
+    "stats": {
+      "clients": "spokojných klientov",
+      "families": "rodinných dovoleniek",
+      "routes": "trás a destinácií"
+    },
+    "features": {
+      "title": "Čo pre vás máme",
+      "card1": {
+        "title": "O nás",
+        "text": "Pomáhame vám vybrať tú správnu dovolenku rýchlo a spoľahlivo"
+      },
+      "card2": {
+        "title": "Zájazdy",
+        "text": "Ponúkame top destinácie s overenými hotelmi a komplexným servisom"
+      },
+      "card3": {
+        "title": "Kontakty",
+        "text": "Jednoducho nás môžete kontaktovať telefonicky alebo online"
+      }
+    },
+    "footer": {
+      "newsletter": "Chcete dostávať najhorúcejšie ponuky",
+      "newsletterPlaceholder": "Váš email",
+      "newsletterBtn": "Odoberať",
+      "newsletterSuccess": "Odoslané!",
+      "navTitle": "NAVIGÁCIA",
+      "contactTitle": "KONTAKT",
+      "socialTitle": "SOCIÁLNE SIETE",
+      "copy": "© 2025 Travel Point. Všetky práva vyhradené."
+    },
+    "anketa": {
+      "step1Label": "Kontaktné údaje",
+      "step2Label": "Preferencie",
+      "step3Label": "Komentár",
+      "accordion1": "1. Kontaktné údaje",
+      "accordion2": "2. Vaše preferencie",
+      "accordion3": "3. Komentár",
+      "nameLbl": "Meno a Priezvisko *",
+      "namePh": "Ján Novák",
+      "emailLbl": "Email *",
+      "emailPh": "jan.novak@mail.sk",
+      "btnNext": "Ďalej →",
+      "satisfactionLegend": "Ako ste spokojní s našimi službami? *",
+      "satisfaction1": "Veľmi spokojný",
+      "satisfaction2": "Spokojný",
+      "satisfaction3": "Neutrálny",
+      "destinationLbl": "Preferovaná destinácia *",
+      "destinationPh": "-- vyberte krajinu --",
+      "commentLbl": "Špeciálne požiadavky",
+      "commentPh": "Napíšte nám viac...",
+      "gdpr": "Súhlasím so spracovaním osobných údajov *",
+      "btnSubmit": "Odoslať",
+      "btnSubmitting": "Odosielam...",
+      "btnSubmitted": "Odoslané!"
+    },
+    "thankyou": {
+      "title": "Ďakujeme, vašu požiadavku sme prijali",
+      "btn": "Návrat na hlavnú stránku"
+    },
+    "stub": {
+      "title": "Cestovateľský raj v príprave",
+      "desc": "Vaše vysnívané dobrodružstvo je už na obzore. Práve pre vás vylaďujeme túto sekciu, aby sme vám priniesli tie najlepšie ponuky z celého sveta. Zostaňte s nami!",
+      "btn": "Zapísať sa na konzultáciu"
+    }
+  },
+  "en": {
+    "nav": {
+      "about": "About Us",
+      "tours": "Tours",
+      "contacts": "Contacts",
+      "cta": "Book a Consultation"
+    },
+    "hero": {
+      "title": "Your Journey to the Sun Starts Here",
+      "desc": "We help you quickly and easily find a holiday to the most popular destinations, where trusted hotels and unforgettable experiences await",
+      "location": "Košice, Slovakia",
+      "btnOffer": "View Offers"
+    },
+    "board": {
+      "destination": "Destination",
+      "dates": "Dates"
+    },
+    "stats": {
+      "clients": "satisfied clients",
+      "families": "family holidays",
+      "routes": "routes and destinations"
+    },
+    "features": {
+      "title": "What We Offer",
+      "card1": {
+        "title": "About Us",
+        "text": "We help you choose the right holiday quickly and reliably"
+      },
+      "card2": {
+        "title": "Tours",
+        "text": "We offer top destinations with trusted hotels and full service"
+      },
+      "card3": {
+        "title": "Contacts",
+        "text": "You can easily reach us by phone or online"
+      }
+    },
+    "footer": {
+      "newsletter": "Want to receive the hottest deals",
+      "newsletterPlaceholder": "Your email",
+      "newsletterBtn": "Subscribe",
+      "newsletterSuccess": "Sent!",
+      "navTitle": "NAVIGATION",
+      "contactTitle": "CONTACT",
+      "socialTitle": "SOCIAL MEDIA",
+      "copy": "© 2025 Travel Point. All rights reserved."
+    },
+    "anketa": {
+      "step1Label": "Contact Details",
+      "step2Label": "Preferences",
+      "step3Label": "Comment",
+      "accordion1": "1. Contact Details",
+      "accordion2": "2. Your Preferences",
+      "accordion3": "3. Comment",
+      "nameLbl": "Full Name *",
+      "namePh": "John Smith",
+      "emailLbl": "Email *",
+      "emailPh": "john.smith@mail.com",
+      "btnNext": "Next →",
+      "satisfactionLegend": "How satisfied are you with our services? *",
+      "satisfaction1": "Very satisfied",
+      "satisfaction2": "Satisfied",
+      "satisfaction3": "Neutral",
+      "destinationLbl": "Preferred Destination *",
+      "destinationPh": "-- select a country --",
+      "commentLbl": "Special Requests",
+      "commentPh": "Tell us more...",
+      "gdpr": "I agree to the processing of personal data *",
+      "btnSubmit": "Submit",
+      "btnSubmitting": "Submitting...",
+      "btnSubmitted": "Submitted!"
+    },
+    "thankyou": {
+      "title": "Thank you, we have received your request",
+      "btn": "Back to Home Page"
+    },
+    "stub": {
+      "title": "Traveller's Paradise Coming Soon",
+      "desc": "Your dream adventure is just around the corner. We are fine-tuning this section to bring you the best offers from around the world. Stay with us!",
+      "btn": "Book a Consultation"
+    }
+  }
+}

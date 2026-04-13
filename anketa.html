@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anketa – Travel Point</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/dot-matrix" rel="stylesheet">
+
+    <!-- Lottie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body class="bg-blue-page">
+    <!-- PAGE LOADER -->
+    <div id="page-loader">
+        <div id="globe-animation"></div>
+        <div id="loader-bottom-area">
+            <div id="loader-bar-track">
+                <div id="loader-bar-fill"></div>
+            </div>
+            <div id="loader-counter">0%</div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="travelpoint-logo.svg" alt="Travel Point logo">
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <div class="burger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="stub.html" data-i18n="nav.about">O nás</a></li>
+                        <li class="nav-item"><a class="nav-link" href="stub.html" data-i18n="nav.tours">Zájazdy</a></li>
+                        <li class="nav-item"><a class="nav-link" href="stub.html" data-i18n="nav.contacts">Kontakty</a></li>
+                    </ul>
+                    <!-- LANGUAGE SWITCHER -->
+                    <div class="lang-switcher">
+                        <button class="lang-btn" data-lang="sk" aria-label="Slovenčina">SK</button>
+                        <span class="lang-divider">|</span>
+                        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+                    </div>
+
+                    <span class="btn btn-nav-disabled" data-i18n="nav.cta">Rezervovať</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-spacer"></section>
+
+        <!-- STICKY PROGRESS INDICATOR -->
+        <div class="progress-steps-container">
+            <div class="container">
+                <div class="progress-steps">
+                    <div class="step-item step-active" id="step-id-1">
+                        <div class="step-circle">1</div>
+                        <div class="step-label" data-i18n="anketa.step1Label">Kontaktné údaje</div>
+                    </div>
+                    <div class="step-item step-pending" id="step-id-2">
+                        <div class="step-circle">2</div>
+                        <div class="step-label" data-i18n="anketa.step2Label">Preferencie</div>
+                    </div>
+                    <div class="step-item step-pending" id="step-id-3">
+                        <div class="step-circle">3</div>
+                        <div class="step-label" data-i18n="anketa.step3Label">Komentár</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORM SECTION -->
+        <section class="features py-4">
+            <div class="container">
+                <form action="thank-you.html" method="POST" class="anketa-form" id="anketaForm">
+                    <div class="accordion" id="anketaAccordion">
+
+                        <!-- STEP 1: CONTACT DATA -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" data-i18n="anketa.accordion1">
+                                    1. Kontaktné údaje
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#anketaAccordion">
+                                <div class="accordion-body">
+                                    <div class="mb-4">
+                                        <label for="priezvisko" class="form-label" data-i18n="anketa.nameLbl">Meno a Priezvisko *</label>
+                                        <input type="text" class="form-control" id="priezvisko" name="meno" required minlength="4" pattern="^[A-Za-zÀ-žа-яА-Я\s]+$" autofocus placeholder="Ján Novák" data-i18n-placeholder="anketa.namePh">
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="email" class="form-label" data-i18n="anketa.emailLbl">Email *</label>
+                                        <input type="email" class="form-control" id="email" name="email" required placeholder="jan.novak@mail.sk" data-i18n-placeholder="anketa.emailPh">
+                                    </div>
+                                    <button type="button" class="btn btn-next-step" id="btn-next-1" disabled data-i18n="anketa.btnNext">
+                                        Ďalej →
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- STEP 2: PREFERENCES -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" data-i18n="anketa.accordion2">
+                                    2. Vaše preferencie
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#anketaAccordion">
+                                <div class="accordion-body">
+                                    <fieldset class="mb-4">
+                                        <legend data-i18n="anketa.satisfactionLegend">Ako ste spokojní s našimi službami? *</legend>
+                                        <div class="d-flex flex-wrap gap-3 mt-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="spokojnost" id="spok-1" value="5" required>
+                                                <label class="form-check-label" for="spok-1" data-i18n="anketa.satisfaction1">Veľmi spokojný</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="spokojnost" id="spok-2" value="4">
+                                                <label class="form-check-label" for="spok-2" data-i18n="anketa.satisfaction2">Spokojný</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="spokojnost" id="spok-3" value="3">
+                                                <label class="form-check-label" for="spok-3" data-i18n="anketa.satisfaction3">Neutrálny</label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+                                    <div class="mb-4">
+                                        <label for="zaujem" class="form-label" data-i18n="anketa.destinationLbl">Preferovaná destinácia *</label>
+                                        <select class="form-select" id="zaujem" name="destinacia" required>
+                                            <option value="" disabled selected data-i18n="anketa.destinationPh">-- vyberte krajinu --</option>
+                                            <option value="taliansko">Taliansko</option>
+                                            <option value="egypt">Egypt</option>
+                                            <option value="grecko">Grécko</option>
+                                            <option value="turecko">Turecko</option>
+                                        </select>
+                                    </div>
+
+                                    <button type="button" class="btn btn-next-step" id="btn-next-2" disabled data-i18n="anketa.btnNext">
+                                        Ďalej →
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- STEP 3: COMMENT -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" data-i18n="anketa.accordion3">
+                                    3. Komentár
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#anketaAccordion">
+                                <div class="accordion-body">
+                                    <div class="mb-2">
+                                        <label for="komentar" class="form-label" data-i18n="anketa.commentLbl">Špeciálne požiadavky</label>
+                                        <textarea class="form-control" id="komentar" name="komentar" rows="4" maxlength="300" placeholder="Napíšte nám viac..." data-i18n-placeholder="anketa.commentPh"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- End Accordion -->
+
+                    <!-- SUBMIT AREA -->
+                    <div class="form-submit-area">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="suhlas" name="suhlas" required>
+                            <label class="form-check-label" for="suhlas" data-i18n="anketa.gdpr">
+                                Súhlasím so spracovaním osobných údajov *
+                            </label>
+                        </div>
+                        <div class="d-flex gap-3">
+                            <button type="submit" class="btn btn-submit-form" id="anketaSubmitBtn">
+                                <span class="spinner"></span>
+                                <span class="btn-text" data-i18n="anketa.btnSubmit">Odoslať</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (injected by footer.js) -->
+    <div id="site-footer"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="loader.js"></script>
+    <script src="footer.js"></script>
+
+    <!-- FORM LOGIC -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var progressContainer = document.querySelector('.progress-steps-container');
+            var stepsItems = [
+                document.getElementById('step-id-1'),
+                document.getElementById('step-id-2'),
+                document.getElementById('step-id-3')
+            ];
+            var btnNext1 = document.getElementById('btn-next-1');
+            var btnNext2 = document.getElementById('btn-next-2');
+            var inputName = document.getElementById('priezvisko');
+            var inputEmail = document.getElementById('email');
+            var radiosSpokojnost = document.querySelectorAll('input[name="spokojnost"]');
+            var selectDestinacia = document.getElementById('zaujem');
+
+            function validateStep1() {
+                var nameVal = inputName.value.trim();
+                var nameRegex = /^[A-Za-zÀ-žа-яА-Я\s]+$/;
+                var isNameValid = nameVal.length >= 4 && nameRegex.test(nameVal);
+                var isEmailValid = inputEmail.validity.valid && inputEmail.value.length > 0;
+                btnNext1.disabled = !(isNameValid && isEmailValid);
+            }
+
+            function validateStep2() {
+                var isRadioSelected = Array.from(radiosSpokojnost).some(function (r) { return r.checked; });
+                var isSelectValid = selectDestinacia.value !== '';
+                btnNext2.disabled = !(isRadioSelected && isSelectValid);
+            }
+
+            inputName.addEventListener('input', validateStep1);
+            inputEmail.addEventListener('input', validateStep1);
+            radiosSpokojnost.forEach(function (r) { r.addEventListener('change', validateStep2); });
+            selectDestinacia.addEventListener('change', validateStep2);
+
+            var DONE_ICON = '<svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>';
+
+            function goToStep(stepNumber) {
+                var collapseIds = ['collapseOne', 'collapseTwo', 'collapseThree'];
+                collapseIds.forEach(function (id, idx) {
+                    var el = document.getElementById(id);
+                    var bsCollapse = bootstrap.Collapse.getInstance(el) || new bootstrap.Collapse(el, { toggle: false });
+                    if (idx + 1 === stepNumber) bsCollapse.show();
+                });
+
+                stepsItems.forEach(function (item, idx) {
+                    var itemStepNum = idx + 1;
+                    if (itemStepNum < stepNumber) {
+                        item.classList.remove('step-active', 'step-pending');
+                        item.classList.add('step-done');
+                        item.querySelector('.step-circle').innerHTML = DONE_ICON;
+                    } else if (itemStepNum === stepNumber && !item.classList.contains('step-done')) {
+                        item.classList.remove('step-pending');
+                        item.classList.add('step-active');
+                    }
+                });
+
+                progressContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+
+            btnNext1.addEventListener('click', function () { goToStep(2); });
+            btnNext2.addEventListener('click', function () { goToStep(3); });
+
+            // Sync progress with manual accordion clicks
+            var DONE_ICON2 = '<svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>';
+            document.querySelectorAll('.accordion-collapse').forEach(function (el, idx) {
+                el.addEventListener('shown.bs.collapse', function () {
+                    var stepNum = idx + 1;
+                    var item = stepsItems[idx];
+                    if (!item.classList.contains('step-done')) {
+                        stepsItems.forEach(function (s, i) {
+                            if (i + 1 < stepNum) {
+                                s.classList.remove('step-active', 'step-pending');
+                                s.classList.add('step-done');
+                                s.querySelector('.step-circle').innerHTML = DONE_ICON2;
+                            }
+                        });
+                        item.classList.remove('step-pending');
+                        item.classList.add('step-active');
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- SUBMISSION + LOADER -->
+    <script>
+        (function () {
+            var anketaForm = document.getElementById('anketaForm');
+            var submitBtn = document.getElementById('anketaSubmitBtn');
+
+            if (anketaForm && submitBtn) {
+                anketaForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    var btnText = submitBtn.querySelector('.btn-text');
+                    submitBtn.classList.add('loading');
+                    submitBtn.disabled = true;
+                    btnText.innerText = 'Odosielam...';
+                    setTimeout(function () {
+                        submitBtn.classList.remove('loading');
+                        submitBtn.classList.add('success');
+                        btnText.innerText = 'Odoslané!';
+                        setTimeout(function () { window.location.href = 'thank-you.html'; }, 1000);
+                    }, 1500);
+                });
+            }
+
+            window.addEventListener('load', function () { TpLoader.run(); });
+        })();
+    </script>
+
+    <script src="i18n.js"></script>
+    <script src="cursor.js"></script>
+</body>
+</html>
