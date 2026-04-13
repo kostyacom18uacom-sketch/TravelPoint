@@ -17,7 +17,7 @@ window.TpLoader = (function () {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: 'Globe.json'
+        path: 'assets/lottie/Globe.json'
       });
     } else {
       globeAnim.play();

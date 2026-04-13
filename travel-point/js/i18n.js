@@ -75,7 +75,7 @@
             renderer: 'svg',
             loop: true,
             autoplay: true,
-            path: 'Globe.json',
+            path: 'assets/lottie/Globe.json',
             name: 'tp-global-globe'
         });
     }

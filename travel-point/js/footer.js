@@ -12,7 +12,7 @@
             <!-- LOGO + EMAIL FORM -->
             <div class="footer-section footer-left">
                 <a class="footer-logo" href="index.html">
-                    <img src="travelpoint-logo.svg" alt="Travel Point logo">
+                    <img src="assets/logo/travelpoint-logo.svg" alt="Travel Point logo">
                 </a>
                 <h6 class="newsletter-title" data-i18n="footer.newsletter">Chcete dostávať najhorúcejšie ponuky</h6>
                 <form class="newsletter-form">
@@ -49,15 +49,15 @@
             <div class="footer-section footer-contact">
                 <h5 data-i18n="footer.contactTitle">KONTAKT</h5>
                 <div class="contact-item">
-                    <img src="phone.svg" alt="Telefon" class="contact-icon">
+                    <img src="assets/icons/phone.svg" alt="Telefon" class="contact-icon">
                     <a href="tel:+421333222111" class="nav-link">+421 333 222 111</a>
                 </div>
                 <div class="contact-item">
-                    <img src="email.svg" alt="Email" class="contact-icon">
+                    <img src="assets/icons/email.svg" alt="Email" class="contact-icon">
                     <a href="mailto:travelpoint@info.sk" class="nav-link">travelpoint@info.sk</a>
                 </div>
                 <div class="contact-item">
-                    <img src="location.svg" alt="Adresa" class="contact-icon">
+                    <img src="assets/icons/location.svg" alt="Adresa" class="contact-icon">
                     <a href="https://www.google.com/maps/place/Ko%C5%A1ice" target="_blank" rel="noopener noreferrer" class="nav-link">Košice, Slovensko</a>
                 </div>
             </div>
@@ -66,15 +66,15 @@
             <div class="footer-section footer-social">
                 <h5 data-i18n="footer.socialTitle">SOCIÁLNE SIETE</h5>
                 <div class="contact-item">
-                    <img src="instagram.svg" alt="Instagram" class="contact-icon-social">
+                    <img src="assets/icons/instagram.svg" alt="Instagram" class="contact-icon-social">
                     <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="nav-link">Instagram</a>
                 </div>
                 <div class="contact-item">
-                    <img src="tiktok.svg" alt="TikTok" class="contact-icon-social">
+                    <img src="assets/icons/tiktok.svg" alt="TikTok" class="contact-icon-social">
                     <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="nav-link">TikTok</a>
                 </div>
                 <div class="contact-item">
-                    <img src="youtube.svg" alt="YouTube" class="contact-icon-social">
+                    <img src="assets/icons/youtube.svg" alt="YouTube" class="contact-icon-social">
                     <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="nav-link">YouTube</a>
                 </div>
             </div>
