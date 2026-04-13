@@ -1386,27 +1386,29 @@ textarea.form-control {
 /* =============================================
    CUSTOM CURSOR – AIRPLANE
    ============================================= */
-*, *::before, *::after {
-  cursor: none !important;
-}
+@media (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
 
-html, body {
-  cursor: none !important;
-}
+  html, body {
+    cursor: none !important;
+  }
 
-#custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 32px;
-  height: 32px;
-  pointer-events: none;
-  z-index: 99999;
-  will-change: transform;
-  transition: opacity 0.3s ease;
-}
+  #custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+    z-index: 99999;
+    will-change: transform;
+    transition: opacity 0.3s ease;
+  }
 
-#custom-cursor.is-hovered svg path {
-  fill: #FFEC79;
+  #custom-cursor.is-hovered svg path {
+    fill: #FFEC79;
+  }
 }
 
